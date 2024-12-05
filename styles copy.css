@@ -1,0 +1,31 @@
+:root {
+  --salmon: #e74c3c;
+  --pink: #ff9ff3;
+  --aqua-marine: #00cec9;
+
+  --primary-color: var(--salmon);
+  --secondary-color: var(--pink);
+  --accent-color: var(--aqua-marine);
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Additional styling using color variables */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Add more styles using color variables as needed */
