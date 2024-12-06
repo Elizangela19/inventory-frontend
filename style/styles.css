@@ -1,55 +1,103 @@
 :root {
-  --salmon: #e74c3c;
-  --pink: #ff9ff3;
-  --aqua-marine: #00cec9;
+  --primary-color: #2d3436;
+  --secondary-color: #636e72;
+  --accent-color: #0984e3;
+  --bg-color: #f8f9fa;
+}
 
-  --primary-color: var(--salmon);
-  --secondary-color: var(--pink);
-  --accent-color: var(--aqua-marine);
-}
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+* {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-body{
-  width: 100vw;
-  height: 100vh;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
 }
-.wrapper{
-  width: 100%;
-  height: 100%;
-  background-color: #CCCCCC;
+
+.wrapper {
   display: grid;
   grid-template-columns: 20% 1fr;
-  grid-template-rows: 1fr;
+  height: 100vh;
 }
-nav{
 
-  border-right: 1px solid #000000;
+nav {
+  background-color: var(--primary-color);
+  color: white;
 }
-nav .header{
-  height: 200px;
+
+nav .header {
+  height: 150px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   align-items: flex-end;
-  padding: 5px;
-  background-color: hsl(204, 72%, 74%);
-background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  justify-content: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #6a89cc, #82ccdd);
+}
 
+nav ul {
+  list-style: none;
+  padding: 0;
 }
-nav .header section{
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--accent-color);
+  border-radius: 5px;
+}
+
+nav ul li span {
+  margin-left: 10px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.content-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
   width: 100%;
-  height: 70px;
-  font-size: 0.9em;
-  color: #FFFFFF;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
-.main{
-  /* background-color: red; */
-  padding: 5px;
+
+table th, table td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+}
+
+table th {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
