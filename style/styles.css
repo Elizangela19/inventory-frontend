@@ -19,31 +19,43 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: 20% 80%; /* Ajustamos el tamaño del menú y contenido */
   height: 100vh;
 }
 
 nav {
   background-color: var(--primary-color);
   color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px; /* Agregamos padding interno */
+  overflow-y: auto; /* Permitimos desplazamiento si el menú es largo */
 }
 
 nav .header {
-  height: 150px;
+  height: 100px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 10px;
   background: linear-gradient(135deg, #6a89cc, #82ccdd);
+  color: white;
+  text-align: center;
+}
+
+nav .header h5 {
+  margin: 5px 0;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 nav ul li a {
@@ -51,13 +63,17 @@ nav ul li a {
   color: white;
   display: flex;
   align-items: center;
-  padding: 10px;
-  transition: all 0.3s;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border-radius: 5px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   background-color: var(--accent-color);
-  border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 nav ul li span {
@@ -66,6 +82,7 @@ nav ul li span {
 
 .main {
   padding: 20px;
+  overflow-y: auto; /* Permitimos scroll en caso de contenido largo */
 }
 
 .page-title {
@@ -87,7 +104,8 @@ table {
   margin-top: 20px;
 }
 
-table th, table td {
+table th,
+table td {
   text-align: left;
   padding: 10px;
   border: 1px solid var(--secondary-color);
